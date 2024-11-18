@@ -691,7 +691,7 @@ class Membre extends React.Component {
                         
                         <div className="card-body">
                         <h4 class="card-title"> Nouvel Utilisateur</h4><hr/><br/>
-                            <Msg bol={ (this.state.state_msg=='r') ? <Msg_reussite msg_reu="Membre LoanMe enregistré avec succès." /> : (this.state.state_msg=='e') ? <Msg_erreur msg_err={this.state.erreur}/> : ''} />
+                            <Msg bol={ (this.state.state_msg=='r') ? <Msg_reussite msg_reu="Membre Finuseco enregistré avec succès." /> : (this.state.state_msg=='e') ? <Msg_erreur msg_err={this.state.erreur}/> : ''} />
                             
                             <form method="post" onSubmit={this.handleSubmit} enctype="multipart/form-data" accept-charset="UTF-8" id="my_member">
                                 

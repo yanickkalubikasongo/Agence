@@ -110,7 +110,7 @@ module.exports={
 
                                     let numPhone= user.dataValues.telephone,
                                         message =`Votre compte vient d'être crée 
-                                        avec succès chez LoanMe       
+                                        avec succès chez Finuseco       
                                         pseudo: ${part_membre.dataValues.pseudo}
                                         mdp : ${mdp_user}
                                         Vous aurez un IM lorsque vous serez affecté
@@ -162,7 +162,7 @@ module.exports={
 
                                     let numPhone= user.dataValues.telephone,
                                         message =`Votre compte vient d'être crée 
-                                        avec succès chez LoanMe       
+                                        avec succès chez Finuseco       
                                         pseudo: ${employ.dataValues.pseudo}
                                         mdp : ${mdp_user}
                                         IM :  ${'0001-'+ code_us}
