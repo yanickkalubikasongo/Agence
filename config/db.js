@@ -29,8 +29,8 @@ const RetraitModel                  = require('../models/retrait.model');
 const TransfertModel                = require('../models/transfert.model');
 const TransactionOptModel           = require('../models/transaction_opt.model');
 
-const sequelize = new Sequelize('loanme','root','',{
-    host    : 'localhost',
+const sequelize = new Sequelize('finuseco_core_database','finuseco_core_u_s_e_r','hQwk-,Kb*4ho',{
+    host    : '157.173.207.96',
     dialect : 'mysql'
 });
 
