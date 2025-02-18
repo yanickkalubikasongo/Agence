@@ -510,7 +510,7 @@ module.exports={
                 let numPhone1=id_compte_exp[0].telephone,
                     message1=`Cher membre, veuillez confirmer votre transfert de : ${data.montant}        
                     votre OTP est le suivant: ${transfert_otp.dataValues.otp}`,
-                    url1 = `https://api2.dream-digital.info/api/SendSMS?api_id=API42124386641&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone1}&textmessage=${message1}`;
+                    url1 = `https://api2.dream-digital.info/api/SendSMS?api_id=API12506297241&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone1}&textmessage=${message1}`;
                 await axios.get(url1);
                 
             }else{
