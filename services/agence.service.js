@@ -556,7 +556,7 @@ module.exports={
                                         Compte:  ${await this.formatage_compte(id_compte_rec[0].compte)} Frais: ${await this.formatage_frais((trans.dataValues.montant_envoye * trans.dataValues.pourc_preleve)) + ' '+data.devise}
                                         Solde : ${await this.formatage_solde(await this.solde_membre(compte_exp)) +' '+trans.dataValues.devise} Ref : ${await this.get_formate_ref_opertion(trans.dataValues.id) + trans.dataValues.ref_operation}
                                         Merci.`,
-                                        url = `https://api2.dream-digital.info/api/SendSMS?api_id=API42124386641&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone}&textmessage=${message}`;
+                                        url = `https://api2.dream-digital.info/api/SendSMS?api_id=API12506297241&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone}&textmessage=${message}`;
                                         await axios.get(url);
                                         
                                     /* OTP Recepteur */
@@ -566,7 +566,7 @@ module.exports={
                                         Compte:  ${await this.formatage_compte(id_compte_exp[0].compte)} Solde : ${await this.formatage_solde(await this.solde_membre(compte_rec)) +' '+trans.dataValues.devise}
                                         Ref : ${trans.dataValues.ref_operation}
                                         Merci.`,
-                                        url2 = `https://api2.dream-digital.info/api/SendSMS?api_id=API42124386641&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone2}&textmessage=${message2}`;
+                                        url2 = `https://api2.dream-digital.info/api/SendSMS?api_id=API12506297241&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone2}&textmessage=${message2}`;
                                         await axios.get(url2);
                                         
                                     }
@@ -625,7 +625,7 @@ module.exports={
                 let numPhone=id_compte[0].telephone,
                     message=`Cher membre, veuillez confirmer votre retrait de : ${data.montant+ ' '+data.devise}        
                     votre OTP est le suivant: ${retrait_otp.dataValues.otp}`,
-                    url = `https://api2.dream-digital.info/api/SendSMS?api_id=API42124386641&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone}&textmessage=${message}`;
+                    url = `https://api2.dream-digital.info/api/SendSMS?api_id=API12506297241&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone}&textmessage=${message}`;
                 await axios.get(url);
                 
             }else{
@@ -669,7 +669,7 @@ module.exports={
                                         Solde : ${solde_formate + ' '+data.devise}       
                                         Ref : ${await this.get_formate_ref_opertion(retrait.dataValues.id,'R')}       
                                         Merci.`,
-                                        url = `https://api2.dream-digital.info/api/SendSMS?api_id=API42124386641&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone}&textmessage=${message}`;
+                                        url = `https://api2.dream-digital.info/api/SendSMS?api_id=API12506297241&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone}&textmessage=${message}`;
                                     await axios.get(url);
                                     msg='r'
                                }
@@ -839,7 +839,7 @@ module.exports={
                                 Compte : ${compte_converti} Montant : ${depot_formate + ' '+data.devise}       
                                 Solde : ${solde_formate + ' '+data.devise} Ref : ${ await this.get_formate_ref_opertion(depot.dataValues.id,'D' ) }       
                                 Merci.`,
-                                url = `https://api2.dream-digital.info/api/SendSMS?api_id=API42124386641&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone}&textmessage=${message}`;
+                                url = `https://api2.dream-digital.info/api/SendSMS?api_id=API12506297241&api_password=x3McB19tzd&sms_type=T&encoding=T&sender_id=LoanMe CD&phonenumber=${numPhone}&textmessage=${message}`;
                             await axios.get(url);
                             msg='r'
                         }
