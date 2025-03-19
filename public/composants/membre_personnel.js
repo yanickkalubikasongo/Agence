@@ -3120,7 +3120,6 @@ class Nouveau_retrait extends React.Component {
         )
     }
 }
-
 class Nouveau_transfert extends React.Component {
     constructor(props) {
         super(props);
@@ -3287,6 +3286,7 @@ class Nouveau_transfert extends React.Component {
         )
     }
 }
+
 class Demande_sode extends React.Component {
     constructor(props) {
         super(props);
