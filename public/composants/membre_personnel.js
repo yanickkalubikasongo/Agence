@@ -3120,6 +3120,7 @@ class Nouveau_retrait extends React.Component {
         )
     }
 }
+
 class Nouveau_transfert extends React.Component {
     constructor(props) {
         super(props);
@@ -3228,6 +3229,12 @@ class Nouveau_transfert extends React.Component {
                 erreur       :[],
                 bol          :''
             })
+            swal({
+                title: "Succès",
+                text: "Transfert réussi.",
+                icon: "success",
+                button: false,
+            }); 
         }else{
             if(send_compte.result =='otp_on'){
                 this.setState({ state_otp:true,state_msg :'' })
@@ -3245,6 +3252,12 @@ class Nouveau_transfert extends React.Component {
                         erreur   :erreurs,
                         state_otp:false
                     })
+                    swal({
+                        title: "Erreur",
+                        text: ''+erreurs,
+                        icon: "error",
+                        button: false,
+                    }); 
                 }
             }
         }
@@ -3254,7 +3267,6 @@ class Nouveau_transfert extends React.Component {
             <div className="col-12" style={divStyle}>
                 <div className="card form-card" style={stylefrom}>
                     <div className="card-body">
-                        <Msg bol={ (this.state.state_msg=='r') ? <Msg_reussite msg_reu="Transfert réussi." /> : (this.state.state_msg=='e') ? <Msg_erreur msg_err={this.state.erreur}/> : ''} />
                         <div className="row">
                             {(this.state.state_otp == true) ? '' : <Input label="Num. Compte Exp." taille="16" plc="xxxx-xxxxxxxxxxx" clas="form-control" inp={this.expeditaire} value={this.state.expeditaire} type="text" /> }
                             {(this.state.state_otp == true) ? '' : <Input label="Num. Compte Rec." taille="16" plc="xxxx-xxxxxxxxxxx" clas="form-control" inp={this.recipiandaire} value={this.state.recipiandaire} type="text" /> }
